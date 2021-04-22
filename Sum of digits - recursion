@@ -1,0 +1,20 @@
+#include<stdio.h>
+int sumofdigits(int);  /* Function declaration*/
+int main()
+{   int num,result;
+    printf("Enter an integer number");
+    scanf("%d", &num);
+    result= sumofdigits (num);  /* Function call */
+    printf ("sum=%d", result);
+    return 0;
+}
+int sumofdigits (int num)   /* Function definition */
+{
+    if (num==0)   /* base condition *)
+       return 0;
+    else 
+       return ((num% 10)+ sumofdigits(num/10)); /* recursive function calls */
+}
+num=0
+4+3+2+1+0
+ 
